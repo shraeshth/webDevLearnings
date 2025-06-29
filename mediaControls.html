@@ -1,0 +1,54 @@
+  <!-- 1. Basic <video> tag with fallback text -->
+    <video src="video/rabbit320.webm" controls>
+        <p>Your browser doesn't support video. <a href="video/rabbit320.webm">Download video</a>.</p>
+    </video>
+
+  <!-- 2. Multiple <source> elements for format compatibility -->
+    <video controls>
+        <source src="video/rabbit320.mp4" type="video/mp4">
+        <source src="video/rabbit320.webm" type="video/webm">
+        <p>Video unsupported. <a href="video/rabbit320.mp4">Download here</a>.</p>
+    </video>
+
+  <!-- 3. Full-featured <video> element -->
+    <video
+        controls
+        width="400"
+        height="400"
+        autoplay
+        loop
+        muted
+        preload="auto"
+        poster="poster.png">
+        <source src="video/rabbit320.mp4" type="video/mp4">
+        <source src="video/rabbit320.webm" type="video/webm">
+        <p>Fallback text. <a href="video/rabbit320.mp4">Download</a>.</p>
+    </video>
+
+  <!-- 4. Basic <audio> element with multiple formats -->
+  <audio controls>
+    <source src="audio/viper.mp3" type="audio/mp3">
+    <source src="audio/viper.ogg" type="audio/ogg">
+    <p>Your browser doesn't support audio. <a href="audio/viper.mp3">Download</a>.</p>
+  </audio>
+
+  <!-- 5. <track> element for subtitles/captions -->
+  <video controls>
+    <source src="video/example.mp4" type="video/mp4">
+    <source src="video/example.webm" type="video/webm">
+    <track kind="subtitles" src="tracks/subtitles_es.vtt" srclang="es" label="Spanish">
+    <p>Video unsupported. <a href="video/example.mp4">Download</a>.</p>
+  </video>
+
+  <!-- 6. Summary of media tag attributes -->
+    <!--
+        - src: Source file path
+        - controls: Shows playback UI
+        - autoplay: Auto play media
+        - muted: Start with no sound
+        - loop: Restart when finished
+        - preload: (none | metadata | auto)
+        - poster: Placeholder image for <video>
+        - <source>: Multiple formats for compatibility
+        - <track>: Subtitle, caption, or description file
+    -->

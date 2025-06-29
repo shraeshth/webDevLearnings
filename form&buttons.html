@@ -1,0 +1,150 @@
+    <!-- 1. form attribute (external input linked to form) -->
+    <form id="form1" action="/submit1">
+        <button type="submit">1. Submit (External input)</button>
+    </form>
+    <input type="text" name="externalInput" form="form1" placeholder="Linked externally">
+
+    <!-- 2. Hidden input -->
+    <form>
+        <input type="hidden" name="token" value="abc123">
+        <button type="submit">2. Submit with Hidden Token</button>
+    </form>
+
+    <!-- 3. Fieldset and legend -->
+    <form>
+        <fieldset>
+        <legend>3. Personal Info</legend>
+        <input type="text" name="firstName" placeholder="First Name">
+        </fieldset>
+    </form>
+
+    <!-- 4. Constraint validation API (basic example with JS) -->
+    <form id="form4">
+        <input type="email" required placeholder="4. Enter email">
+        <button onclick="document.getElementById('form4').reportValidity()">Check Validity</button>
+    </form>
+
+    <!-- 5. Autocomplete attribute -->
+    <form autocomplete="on">
+        <input type="email" autocomplete="email" placeholder="5. Email autocomplete">
+    </form>
+
+    <!-- 6. Button types -->
+    <form>
+        <button type="submit">6a. Submit</button>
+        <button type="reset">6b. Reset</button>
+        <button type="button" onclick="alert('Clicked!')">6c. Button</button>
+    </form>
+
+    <!-- 7. novalidate on form -->
+    <form novalidate>
+        <input type="email" required placeholder="7. Will skip validation">
+        <button type="submit">Submit without validation</button>
+    </form>
+
+    <!-- 8. Datalist for suggestions -->
+    <form>
+        <input list="browsers" placeholder="8. Choose a browser">
+        <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        </datalist>
+    </form>
+
+    <!-- 9. multiple on inputs -->
+    <form>
+        <input type="file" multiple>
+        <input type="email" multiple placeholder="9. Enter multiple emails">
+    </form>
+
+    <!-- 10. Custom form control styling note -->
+    <form>
+        <!-- Not functional styling here, just a note -->
+        <label>10. Custom style (requires CSS):</label>
+        <input type="checkbox" style="appearance: none; width: 20px; height: 20px; background: red;">
+    </form>
+
+    <!-- 11. Implicit submission (press Enter to submit) -->
+    <form action="/search">
+        <input type="text" name="query" placeholder="11. Press Enter to submit">
+    </form>
+
+    <!-- 12. enctype and file upload -->
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="resume">
+        <button type="submit">12. Upload File</button>
+    </form>
+
+    <!-- 13. readonly vs disabled -->
+    <form>
+        <input type="text" value="13a. Readonly" readonly>
+        <input type="text" value="13b. Disabled" disabled>
+    </form>
+
+    <!-- 14. accesskey -->
+    <form>
+        <button accesskey="s">14. Save (Alt+S / Ctrl+Alt+S)</button>
+    </form>
+
+    <!-- 15. RADIO BUTTON GROUP: Choose one hotel room type -->
+    <fieldset>
+      <legend>Choose hotel room type:</legend>
+
+      <!-- 4.1 Economy (pre-selected) -->
+      <input type="radio" id="hotelChoice1" name="hotel" value="economy" checked />
+      <label for="hotelChoice1">Economy (+$0)</label>
+
+      <!-- 4.2 Superior -->
+      <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
+      <label for="hotelChoice2">Superior (+$50)</label>
+
+      <!-- 4.3 Penthouse (disabled) -->
+      <input type="radio" id="hotelChoice3" name="hotel" value="penthouse" disabled />
+      <label for="hotelChoice3">Penthouse (+$150)</label>
+    </fieldset>
+
+    <!-- 16. CHECKBOX GROUP: Choose multiple classes -->
+    <fieldset>
+      <legend>Choose classes to attend:</legend>
+
+      <input type="checkbox" id="yoga" name="yoga" />
+      <label for="yoga">Yoga (+$10)</label>
+
+      <input type="checkbox" id="coffee" name="coffee" />
+      <label for="coffee">Coffee roasting (+$20)</label>
+
+      <input type="checkbox" id="balloon" name="balloon" />
+      <label for="balloon">Balloon animal art (+$5)</label>
+    </fieldset>
+
+    <!-- 17. SELECT DROPDOWN: Transport options -->
+    <p>
+      <label for="transport">How are you getting here:</label>
+      <select name="transport" id="transport">
+        <option value="">--Please choose an option--</option>
+        <option value="plane">Plane</option>
+        <option value="bike">Bike</option>
+        <option value="walk">Walk</option>
+        <option value="bus">Bus</option>
+        <option value="train">Train</option>
+        <option value="jetPack">Jet pack</option>
+      </select>
+    </p>
+
+    <!-- 18. TEXTAREA: Multi-line text input -->
+    <p>
+      <label for="comments">Any other comments:</label>
+      <textarea id="comments" name="comments" rows="5" cols="33"></textarea>
+    </p>
+
+    <!-- 19. SUBMIT BUTTON -->
+    <p>
+      <button type="submit">Continue to payment</button>
+    </p>
+
+  </form>
+
+    <!-- 20. Custom form element placeholder (requires JS/Web Components) -->
+        <!-- NOTE: Demonstration only — needs JS setup -->
+        <p>15. Custom form-associated elements need Web Components and JavaScript.</p>

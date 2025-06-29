@@ -1,0 +1,84 @@
+<!-- 1. Unordered List (<ul>) -->
+    <!-- Used when item order doesn't matter -->
+        <ul>
+            <li>milk</li>
+            <li>eggs</li>
+            <li>bread</li>
+        </ul>
+
+<!-- 2. Ordered List (<ol>) -->
+    <!-- Use when sequence/order matters -->
+        <ol>
+            <li>Turn on oven</li>
+            <li>Mix ingredients</li>
+            <li>Bake for 30 minutes</li>
+        </ol>
+
+<!-- 3. Nesting Lists -->
+    <!-- Use nested <ul> or <ol> inside <li> for sub-items -->
+        <ol>
+            <li>Prepare ingredients</li>
+                <li>
+                    Blend mixture
+                    <ul>
+                        <li>Blend lightly for coarse texture</li>
+                        <li>Blend thoroughly for smooth hummus</li>
+                    </ul>
+                </li>
+        </ol>
+
+<!-- 4. Description List (<dl>) -->
+    <!-- Use for term-definition style content -->
+        <dl>
+            <dt>Soliloquy</dt>
+                <dd>A speech delivered to oneself in drama</dd>
+
+            <dt>Monologue</dt>
+                <dd>A long speech spoken to others</dd>
+
+            <dt>Aside</dt>
+                <dd>Spoken only to the audience in plays</dd>
+                <dd>Can also mean a side note in writing</dd>
+        </dl>
+
+<!-- 5. Semantic Usage Best Practices -->
+    <!-- - Use <ul> for unordered items (grocery, nav menus)
+        - Use <ol> for steps/instructions
+        - Use <dl> for glossaries, FAQs, or metadata pairs -->
+
+<!-- 6. Lists inside real page layout example -->
+    <h1>Quick Hummus Recipe</h1>
+
+    <h2>Ingredients</h2>
+
+    <ul>
+        <li>400g chickpeas</li>
+        <li>1 clove garlic</li>
+        <li>Tahini</li>
+    </ul>
+
+    <h2>Instructions</h2>
+        <ol>
+        <li>Peel and chop garlic</li>
+        <li>Add ingredients to processor</li>
+        <li>
+            Blend to desired consistency
+            <ul>
+                <li>Coarse: short blend</li>
+                <li>Smooth: longer blend</li>
+            </ul>
+        </li>
+        </ol>
+
+    <h2>Storage</h2>
+
+    <p>Store in fridge for 7 days or freeze up to 2 months.</p>
+
+<!-- 7. Navigation Menu with Lists -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#recipes">Recipes</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>

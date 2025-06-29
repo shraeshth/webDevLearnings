@@ -1,0 +1,42 @@
+<!-- 1. Use <em> for emphasis (spoken or read stress) -->
+    <p>This is <em>really</em> important.</p>
+    <!-- Semantically means "emphasized text", screen readers adjust tone -->
+
+<!-- 2. Use <strong> for strong importance (critical meaning) -->
+    <p>Please <strong>do not</strong> touch this button.</p>
+    <!-- Screen readers raise vocal intensity -->
+
+<!-- 3. You can nest <strong> and <em> -->
+    <p><strong>You may <em>seriously</em> regret it.</strong></p>
+
+<!-- 4. Don't use <em> or <strong> for styling only -->
+    <!-- Use CSS and <span> or <i>/<b> if needed for appearance only -->
+    <p>This word is <span style="font-style: italic">styled italic</span>.</p>
+
+<!-- 5. Presentational tags (<b>, <i>, <u>) are NOT recommended -->
+    <!-- They are legacy tags, redefined with loose semantics -->
+    <!-- Use only if no better alternative exists -->
+
+<!-- GOOD -->
+    <p><strong>Emergency Alert</strong></p>
+    <p><em>Foreign words like <i lang="fr">croissant</i> are italicized semantically.</em></p>
+
+<!-- 6. <u> is semantically confusing: avoid unless for misspellings or special cases -->
+    <p>My name is <u class="spelling-error">Jonh</u>.</p>
+    <!-- Style underline in CSS, not with <u> unless meaning is underline-worthy -->
+
+<!-- 7. Language tags matter for screen readers -->
+    <p><i lang="id">nasi goreng</i> is Indonesian fried rice.</p>
+
+<!-- 8. Semantic examples -->
+    <dl>
+    <dt>Semantic HTML</dt>
+    <dd>Use tags for <b>meaning</b>, not looks.</dd>
+    </dl>
+
+<!-- 9. Summary Guidelines -->
+    <!-- Use <strong> and <em> when you mean it -->
+    <!-- Use <b> and <i> sparingly for legacy roles -->
+    <!-- Avoid <u> unless context demands underlining not related to links -->
+    <!-- Prefer <span> with CSS for purely visual effects -->
+

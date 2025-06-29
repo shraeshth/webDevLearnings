@@ -1,0 +1,108 @@
+  <!-- 1. Basic Table Structure -->
+  <table border="1">
+    <tr>
+      <td>Row 1, Cell 1</td>
+      <td>Row 1, Cell 2</td>
+    </tr>
+    <tr>
+      <td>Row 2, Cell 1</td>
+      <td>Row 2, Cell 2</td>
+    </tr>
+  </table>
+
+  <!-- 2. Table with Headers -->
+  <table border="1">
+    <caption>Sample People Data</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Chris</td>
+        <td>38</td>
+      </tr>
+      <tr>
+        <td>Sarah</td>
+        <td>29</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 3. Table with rowspan and colspan -->
+  <table border="1">
+    <caption>Animal Names by Type</caption>
+    <thead>
+      <tr>
+        <th colspan="2" scope="colgroup">Animals</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th colspan="2" scope="col">Hippopotamus</th>
+      </tr>
+      <tr>
+        <th scope="row" rowspan="2">Horse</th>
+        <td>Mare</td>
+      </tr>
+      <tr>
+        <td>Stallion</td>
+      </tr>
+      <tr>
+        <th colspan="2" scope="col">Crocodile</th>
+      </tr>
+      <tr>
+        <th scope="row" rowspan="2">Chicken</th>
+        <td>Hen</td>
+      </tr>
+      <tr>
+        <td>Rooster</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 4. Table with tfoot and scope attributes -->
+  <table border="1">
+    <caption>Spending Record</caption>
+    <thead>
+      <tr>
+        <th scope="col">Purchase</th>
+        <th scope="col">Location</th>
+        <th scope="col">Date</th>
+        <th scope="col">Evaluation</th>
+        <th scope="col">Cost (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Haircut</th>
+        <td>Hairdresser</td>
+        <td>12/09</td>
+        <td>Great idea</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <th scope="row">Shoes</th>
+        <td>Shoestore</td>
+        <td>13/09</td>
+        <td>Good</td>
+        <td>60</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">SUM</td>
+        <td>90</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- 5. Best Practices -->
+  <!-- Use <table> only for tabular data -->
+  <!-- Never use tables for layout -->
+  <!-- Always include <th> for headings to aid accessibility -->
+  <!-- Use <caption> to describe tables for screen readers and scanning -->
+  <!-- Use <thead>, <tbody>, <tfoot> for logical grouping and CSS control -->
+  <!-- Add scope attributes to <th> for better screen reader support -->

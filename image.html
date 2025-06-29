@@ -1,0 +1,86 @@
+  <!-- 1. Basic image embedding with required attributes -->
+        <!-- The <img> element is a void element (no closing tag), and must have a src and alt attribute -->
+        <img src="images/dinosaur.jpg" alt="Dinosaur skeleton in a museum" />
+
+  <!-- 2. Relative vs Absolute URLs -->
+        <!-- Relative URLs are better for site portability and performance -->
+        <!-- Absolute URLs can break when hosting changes, and hotlinking is discouraged -->
+            <img src="https://www.example.com/images/dinosaur.jpg" alt="External dinosaur image" />
+
+  <!-- 3. Hotlinking Warning -->
+  <!-- Do not use images hosted on someone else’s server without permission -->
+  <!-- Hotlinking is unethical and unreliable -->
+
+  <!-- 4. Replaced Elements -->
+        <!-- <img> is a replaced element — its content comes from an external source -->
+        <!-- Browser doesn't define its layout; the image file does -->
+
+  <!-- 5. The alt Attribute -->
+        <!-- Essential for accessibility and SEO -->
+        <!-- Describes the content of the image when it can't be displayed -->
+            <img
+                src="images/dinosaur.jpg"
+                alt="The head and torso of a dinosaur skeleton; it has a large head with sharp teeth"
+            />
+
+  <!-- 6. Empty alt for decorative images -->
+         <!-- Use alt="" if the image is purely decorative so screen readers skip it -->
+            <img src="images/decorative-pattern.png" alt="" />
+
+  <!-- 7. Image inside a link should still have accessible text -->
+            <a href="https://example.com/museum">
+                <img src="images/ticket.jpg" alt="Buy museum ticket online" />
+            </a>
+
+  <!-- 8. Avoid putting text in images -->
+        <!-- Use CSS to style text instead of baking it into images -->
+
+  <!-- 9. Width and Height attributes -->
+        <!-- Helps reserve layout space and avoid layout shift (CLS) -->
+        <!-- Specify image dimensions in pixels without units -->
+            <img
+                src="images/dinosaur.jpg"
+                alt="Dinosaur skeleton exhibit"
+                width="400"
+                height="341"
+            />
+
+  <!-- 10. Don't use HTML to resize images -->
+        <!-- Resize images using an image editor for proper quality -->
+        <!-- Or use CSS with caution, ensuring aspect ratio is maintained -->
+
+  <!-- 11. Image Title Attribute (use with care) -->
+        <!-- Not reliably accessible — not keyboard friendly or consistently read by screen readers -->
+        <!-- Prefer including this info in surrounding text instead -->
+            <img
+                src="images/dinosaur.jpg"
+                alt="Dinosaur skeleton"
+                width="400"
+                height="341"
+                title="A T-Rex on display in the Manchester University Museum"
+            />
+
+  <!-- 12. Using <figure> and <figcaption> for semantic image-caption grouping -->
+        <!-- Helps associate captions with images meaningfully for accessibility -->
+            <figure>
+                <img
+                src="images/dinosaur.jpg"
+                alt="The head and torso of a dinosaur skeleton with sharp teeth"
+                width="400"
+                height="341"
+                />
+                <figcaption>
+                A T-Rex on display in the Manchester University Museum.
+                </figcaption>
+            </figure>
+
+  <!-- 13. Understanding Media Licensing -->
+        <!-- Always ensure proper permissions when using images -->
+        <!-- Categories include:
+            - All rights reserved (get explicit permission or license)
+            - Permissive (e.g., Creative Commons, MIT)
+            - Public Domain/CC0 (no restrictions) -->
+
+  <!-- 14. Searching for Licensed Images -->
+        <!-- Use tools like Google Image "Usage Rights" or repositories like Pixabay, Unsplash, etc. -->
+        <!-- Always read and follow license instructions -->

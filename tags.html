@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+  <!-- Visible content starts here -->
+
+  <header>
+    <h1>HTML Tag Reference</h1>
+    <!-- h1: Main heading -->
+    <p>This is the header section.</p>
+  </header>
+
+  <nav>
+    <!-- Navigation bar -->
+    <a href="#text">Text</a> |
+    <a href="#media">Media</a> |
+    <a href="#forms">Forms</a>
+  </nav>
+
+  <main>
+    <!-- Main content block -->
+
+    <section id="text">
+      <h2>Text Content</h2>
+
+      <p>This is a paragraph with <strong>strong</strong> and <em>emphasized</em> text.</p>
+
+      <p>You can also write <b>bold</b>, <i>italic</i>, <u>underline</u>, and use <small>small</small> or <mark>highlight</mark> inside a paragraph.</p>
+
+      <blockquote cite="https://example.com">
+        This is a blockquote for long quoted text.
+      </blockquote>
+
+      <code>print("Hello World")</code>
+      <!-- Displays inline code -->
+
+      <pre>
+def greet():
+    print("Hello World")
+      </pre>
+      <!-- Preformatted block of code -->
+
+      <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+      <!-- Abbreviation with tooltip -->
+    </section>
+
+    <section id="lists">
+      <h2>Lists</h2>
+
+      <ul>
+        <!-- Unordered list -->
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ul>
+
+      <ol>
+        <!-- Ordered list -->
+        <li>Login</li>
+        <li>Choose Plan</li>
+        <li>Checkout</li>
+      </ol>
+
+      <dl>
+        <!-- Description list -->
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <section id="media">
+      <h2>Media</h2>
+
+      <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+      <!-- Image tag -->
+
+      <audio controls>
+        <source src="sample.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <!-- Audio playback -->
+
+      <video width="320" height="240" controls>
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- Video playback -->
+    </section>
+
+    <section id="forms">
+      <h2>Forms</h2>
+
+      <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+
+        <br>
+
+        <label for="skills">Skills:</label>
+        <input type="checkbox" name="skills" value="html"> HTML
+        <input type="checkbox" name="skills" value="css"> CSS
+
+        <br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <br>
+
+        <textarea name="message" rows="4" cols="40" placeholder="Your message here..."></textarea>
+
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </form>
+    </section>
+
+    <section id="tables">
+      <h2>Table Example</h2>
+
+      <table border="1">
+        <caption>Student Marks</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Maths</th>
+            <th>Science</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>85</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>75</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="misc">
+      <h2>Miscellaneous Tags</h2>
+
+      <details>
+        <summary>Click to expand</summary>
+        This content is hidden until expanded.
+      </details>
+
+      <progress value="70" max="100"></progress>
+      <!-- Visual progress bar -->
+
+      <hr>
+      <!-- Horizontal line divider -->
+
+      <span>This is a span.</span>
+      <!-- Inline text container -->
+
+      <br>
+      <!-- Line break -->
+
+      <div>This is a div block.</div>
+      <!-- Generic block container -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <!-- Copyright -->
+  </footer>
+
+</body>
+</html>

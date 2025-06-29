@@ -1,0 +1,62 @@
+  <!-- 1. Blockquotes for external quoted blocks -->
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+        <p>
+        The <code>&lt;blockquote&gt;</code> element indicates that the enclosed text is an extended quotation.
+        </p>
+    </blockquote>
+
+  <!-- 2. <q> for inline quotes (with optional cite) -->
+    <p>
+        As the docs state, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+        this is for short inline quotations.
+        </q>
+    </p>
+
+  <!-- 3. <cite> for cited sources or book/article titles -->
+    <p>
+        According to <a href="https://developer.mozilla.org/"><cite>MDN Web Docs</cite></a>, semantic HTML is crucial.
+    </p>
+
+  <!-- 4. <abbr> for abbreviations/acronyms (use title for full form) -->
+    <p>
+        <abbr title="World Health Organization">WHO</abbr> publishes health stats annually.
+    </p>
+
+  <!-- 5. <address> for contact info, only when it's about the document/author -->
+    <address>
+        Contact: <a href="mailto:web@example.com">web@example.com</a><br>
+        123 Semantic Street<br>
+        HTML City, WEB 1010
+    </address>
+
+  <!-- 6. Superscript and Subscript -->
+    <p>This was written on the 25<sup>th</sup> of May.</p>
+    <p>Chemical formula: H<sub>2</sub>O</p>
+    <p>Math: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+
+  <!-- 7. <time> element — machine-readable datetime -->
+    <p>
+        Event starts at <time datetime="2025-07-04T20:00">8 PM, July 4, 2025</time>.
+    </p>
+
+  <!-- 8. Computer Code Markup -->
+    <pre>
+        <code>
+            const greet = () => {
+    console.log("Hello, world!");   
+    }
+        </code>
+    </pre>
+
+  <!-- 9. <var> for variables, <kbd> for user input, <samp> for output -->
+    <p>Type <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
+    <p>Use the variable <var>x</var> to represent velocity.</p>
+    <pre>$ <kbd>ping openai.com</kbd>
+    <samp>Reply from 104.18.21.218: bytes=32 time=12ms TTL=56</samp></pre>
+
+  <!-- 10. <mark> for highlighting relevant or searched terms -->
+    <p>Search results for "semantic": <mark>semantic</mark> HTML improves structure.</p>
+
+  <!-- 11. <b> and <i> with semantic reasons only -->
+    <p>Scientific name: <i lang="la">Canis lupus</i></p>
+    <p>This is a <b>key</b> concept in markup.</p>

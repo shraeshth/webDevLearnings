@@ -1,0 +1,135 @@
+<!--
+  Emmet Cheat Sheet: Common Abbreviations + Their Expanded HTML
+  Format: abbreviation => description => expanded code
+-->
+
+<!-- BASIC TAGS -->
+html:5 => HTML5 boilerplate
+html:5
+
+<!-- TAGS WITH CLASSES/IDS -->
+div.container => <div class="container"></div>
+div#header => <div id="header"></div>
+ul.menu>li.item => <ul class="menu"><li class="item"></li></ul>
+
+<!-- NESTING + CHILD COMBOS -->
+div>ul>li => parent > child > sub-child
+<div>
+  <ul>
+    <li></li>
+  </ul>
+</div>
+
+ul>li*3 => unordered list with 3 list items
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<!-- SIBLING COMBINATIONS -->
+div+p => div followed by p (sibling)
+<div></div>
+<p></p>
+
+h1+h2+h3 => multiple heading siblings
+<h1></h1>
+<h2></h2>
+<h3></h3>
+
+<!-- MULTIPLICATION -->
+nav>ul>li*5 => nav menu with 5 links
+<nav>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</nav>
+
+<!-- GROUPING -->
+(header>h1)+main+footer>p => combined layout
+<header>
+  <h1></h1>
+</header>
+<main></main>
+<footer>
+  <p></p>
+</footer>
+
+<!-- TEXT INSERTION -->
+p{Hello world} => <p>Hello world</p>
+a{Click here} => <a href="">Click here</a>
+
+<!-- ATTRIBUTES -->
+input:checkbox => <input type="checkbox">
+input:text => <input type="text">
+a:link => <a href=""></a>
+img:src => <img src="" alt="">
+
+<!-- FORMS -->
+form>label+input:email+input:submit => Simple form
+<form>
+  <label></label>
+  <input type="email">
+  <input type="submit">
+</form>
+
+<!-- TABLES -->
+table>thead>tr>th*3+tbody>tr*2>td*3 => Table structure
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- COMMENTS -->
+<!-- Use ! to generate html:5 -->
+<!-- Use div.class or #id shortcuts -->
+<!-- Use > for children, + for siblings, * for multiples, () for grouping -->
+<!-- Use {} for text, [] for attributes -->
+
+<!-- ADVANCED -->
+ul>li.item$*3 => numbered class auto-increment
+<ul>
+  <li class="item1"></li>
+  <li class="item2"></li>
+  <li class="item3"></li>
+</ul>
+
+section>article>h2{Title $}+p{Paragraph $}*2 => templated content blocks
+<section>
+  <article>
+    <h2>Title 1</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+  </article>
+</section>
+
+<!-- CSS SHORTHAND -->
+m10 => margin: 10px;
+p20-10 => padding: 20px 10px;
+d:n => display: none;
+fs14 => font-size: 14px;
+c#333 => color: #333;
+bgc#f00 => background-color: red;
+
+<!-- That's the core Emmet syntax summary for HTML and CSS -->

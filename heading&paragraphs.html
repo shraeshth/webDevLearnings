@@ -1,0 +1,49 @@
+<!-- 1. Semantic Structure Is Not Optional -->
+    <!-- Use <h1> to <h6> in correct order, NOT for visual size, but for meaning -->
+        <h1>Main Title (only one per page)</h1>
+        <h2>Chapter Title</h2>
+        <h3>Subsection of Chapter</h3>
+        <p>Paragraph under the heading above.</p>
+
+<!-- 2. Do NOT skip heading levels -->
+    <!-- Good: h1 > h2 > h3. Bad: h1 > h3 > h2 (illogical structure) -->
+
+<!-- 3. Don't use headings for styling only -->
+    <!-- BAD EXAMPLE (not semantic): -->
+        <span style="font-size: 32px"><b>Fake Heading</b></span>
+    <!-- GOOD EXAMPLE (semantic): -->
+        <h1>Real Heading</h1>
+
+<!-- 4. Headings boost SEO and Accessibility -->
+    <!-- Search engines prefer keywords inside headings -->
+    <!-- Screen readers use headings as signposts to help users navigate -->
+
+<!-- 5. Use Paragraphs for all blocks of text -->
+    <p>This is a proper paragraph. Without <p>, text becomes unreadable.</p>
+
+<!-- 6. Structured text improves scanning + readability -->
+    <!-- Without structure, users see a wall of text and leave quickly -->
+
+<!-- 7. Limit to 2-3 heading levels per page unless absolutely needed -->
+    <!-- Overuse leads to cluttered, hard-to-navigate pages -->
+
+<!-- 8. CSS is for presentation, not structure -->
+    <!-- Use HTML to define role (heading, paragraph); use CSS for size/color/etc -->
+
+<!-- 9. Avoid using <br> repeatedly to separate lines -->
+    <!-- Use <p> and heading tags instead -->
+        <p>Never do this:<br>Line 1<br>Line 2<br>Line 3</p>
+
+<!-- 10. Accessibility: lang attribute + heading hierarchy -->
+    <html lang="en">
+    <head><title>Headings Structure</title></head>
+    <body>
+        <h1>Main Topic</h1>
+        <h2>Subtopic</h2>
+        <p>Descriptive content...</p>
+        <h2>Another Subtopic</h2>
+        <p>More details...</p>
+    </body>
+    </html>
+
+<!-- Summary: Don't use tags based on looks — use based on meaning. This helps SEO, accessibility, and maintenance. -->
