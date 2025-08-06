@@ -1,0 +1,89 @@
+//Chapter 9: DOM Manipulation
+// DOM is the brain of the page. Manipulate it carefully to avoid unexpected bugs.
+
+// DOM Tree Structure:
+// node, element, text, comment
+
+// Selecting Elements:
+const byId = document.getElementById("example");
+const byClass = document.getElementsByClassName("item"); // HTMLCollection
+const queryOne = document.querySelector(".item"); // first match
+const queryAll = document.querySelectorAll(".item"); // NodeList (static)
+
+// Text/Content Access:
+const el = document.querySelector("#text-box");
+el.innerText; // visible text
+el.textContent; // full text (even hidden)
+el.innerHTML; // HTML inside
+
+// Attribute Manipulation:
+el.getAttribute("id");
+el.setAttribute("class", "highlight");
+el.removeAttribute("disabled");
+
+// Dynamic DOM Manipulation:
+const div = document.createElement("div");
+div.textContent = "Hello World";
+document.body.appendChild(div);
+document.body.removeChild(div);
+document.body.prepend(div);
+
+// Style Updates:
+el.style.color = "red";
+el.style.fontWeight = "bold";
+el.classList.add("active");
+el.classList.remove("hidden");
+el.classList.toggle("collapsed");
+
+// -------------------- Confusion --------------------
+// Difference between innerText vs textContent vs innerHTML
+// innerText -> visible text only
+// textContent -> all text (ignores CSS)
+// innerHTML -> includes HTML tags inside
+
+// Live HTMLCollection vs static NodeList
+// getElementsByClassName returns live list (updates automatically)
+// querySelectorAll returns static list (snapshot)
+
+// -------------------- Industry Best Practices --------------------
+
+// 1. Always use querySelector/querySelectorAll unless there's a strong reason not to.
+// 2. Avoid innerHTML when inserting user input — use createElement to prevent XSS.
+// 3. Minimize DOM access in loops — cache selectors outside loops.
+// 4. Use event delegation for better performance with dynamic elements.
+// 5. Always remove listeners and DOM elements to avoid memory leaks.
+
+// -------------------- Extra Examples --------------------
+
+// Example 1: Add multiple items dynamically
+const ul = document.querySelector("ul");
+["One", "Two", "Three"].forEach((text) => {
+  const li = document.createElement("li");
+  li.textContent = text;
+  ul.appendChild(li);
+});
+
+// Example 2: Toggle theme class on body
+const toggleBtn = document.querySelector("#theme-toggle");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+});
+
+// Example 3: Safe attribute setting
+const link = document.createElement("a");
+link.setAttribute("href", "https://example.com");
+link.setAttribute("target", "_blank");
+link.textContent = "Visit Site";
+document.body.appendChild(link);
+
+// Example 4: Remove elements
+const removable = document.querySelector(".removable");
+if (removable) removable.remove();
+
+// Example 5: Live HTMLCollection vs static NodeList
+const liveList = document.getElementsByClassName("live");
+const staticList = document.querySelectorAll(".live");
+
+document.body.appendChild(document.createElement("div")).classList.add("live");
+console.log(liveList.length); // updated
+console.log(staticList.length); // not updated
